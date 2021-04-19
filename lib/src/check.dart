@@ -71,9 +71,6 @@ void testPwdMethods() {
   print('Password strength of "adamsmith": ${passwordStrength('adamsmith')}');
   print(
       'Password strength of "numba61987@_": ${passwordStrength('numba61987@_')}');
-  //print('Security of "numba61987@_": ${isSecure('numba61987@_')}');
-  print(
-      'Password strength of "correct horse battery staple": ${passwordStrength('correct horse battery staple')}');
-  print('Security of "correct horse battery staple": ${isSecure('correct horse battery staple')}');
+  print('Security of "numba61987@_": ${isSecure('numba61987@_')}');
   print('Security of "adamsmith": ${isSecure('adamsmith')}');
 }
