@@ -25,6 +25,14 @@ void main(){
 import 'package:securitycheck/securitycheck.dart';
 
 void main() {
+  print('\n');
+  print('\n');
+  print('Testing password methods:');
   testPwdMethods();
+  print('\n');
+  print('\n');
+  print('Testing character methods:');
   testCharMethods();
+  print('\n');
+  print('\n');
 }

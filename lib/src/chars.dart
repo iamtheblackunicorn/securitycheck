@@ -5,13 +5,13 @@ Licensed under the MIT license.
 
 /// This method returns the position of a
 /// given character as an integer.
-int getCharPositon(String character){
+int getCharPositon(String character) {
   int result = 0;
   String labString = character.toLowerCase();
   String alphabet = 'abcdefghijklmnopqrstuvw';
   List<String> alphabetList = alphabet.split('');
-  for (int i = 0; i < alphabetList.length; i++){
-    if (alphabetList[i] == labString){
+  for (int i = 0; i < alphabetList.length; i++) {
+    if (alphabetList[i] == labString) {
       result = i + 1;
       break;
     } else {
@@ -23,7 +23,7 @@ int getCharPositon(String character){
 
 /// This method returns the space between two characters
 /// as an integer.
-int getCharSpace(String characterOne, String characterTwo){
+int getCharSpace(String characterOne, String characterTwo) {
   int charOnePos = getCharPositon(characterOne);
   int charTwoPos = getCharPositon(characterTwo);
   int space = charTwoPos - charOnePos;
@@ -40,7 +40,6 @@ int getNumberSpace(String numberOne, String numberTwo) {
   int space = numberTwoInt - numberOneInt;
   return space;
 }
-
 
 /// This method returns a boolean value
 /// (either [true] or [false]) of whether
@@ -63,10 +62,9 @@ String stringType(String character) {
   String labString = character.toLowerCase();
   String alphabet = 'abcdefghijklmnopqrstuvw';
   List<String> alphabetList = alphabet.split('');
-  if (alphabetList.contains(character) == true){
+  if (alphabetList.contains(labString) == true) {
     // Do nothing.
-  }
-  else {
+  } else {
     result = 'specialChar';
   }
   return result;
@@ -75,18 +73,19 @@ String stringType(String character) {
 /// This method returns the type
 /// of a character in a password.
 String charType(String character) {
-  String result = 'int'
-  if (isInt(character) == false){
+  String result = 'int';
+  if (isInt(character) == false) {
     result = stringType(character);
   } else {
     // Do nothing.
   }
+  return result;
 }
 
 /// This method tests all of the
 /// above methods.
-void testCharMethods(){
-  print(getCharPosition('a'));
+void testCharMethods() {
+  print(getCharPositon('a'));
   print(getCharSpace('a', 'd'));
   print(getNumberSpace('1', '9'));
   print(isInt('2'));
@@ -94,6 +93,6 @@ void testCharMethods(){
   print(stringType('@'));
   print(stringType('v'));
   print(charType('3'));
-  print(charType('3'));
+  print(charType('a'));
   print(charType('-'));
 }

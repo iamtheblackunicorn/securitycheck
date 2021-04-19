@@ -14,45 +14,35 @@ int passwordStrength(String password) {
   for (int i = 1; i < charList.length; i++) {
     String currentItem = charList[i];
     String currentItemType = charType(currentItem);
-    String lastItem = charList[i-1];
+    String lastItem = charList[i - 1];
     String lastItemType = charType(lastItem);
-    if (
-      currentItemType == 'normChar'
-      && lastItemType == 'normChar'
-    ){
+    if (currentItemType == 'normChar' && lastItemType == 'normChar') {
       int itemSpace = getCharSpace(currentItem, lastItem);
       if (itemSpace > 3) {
         result = result + 1;
       } else {
         // Do nothing.
       }
-    }
-    else if (
-      currentItemType == 'specialChar'
-      && lastItemType == 'specialChar'
-    ){
+    } else if (currentItemType == 'specialChar' &&
+        lastItemType == 'specialChar') {
       result = result + 2;
-    }
-    else if (
-      currentItemType == 'int'
-      && lastItemType == 'int'
-    ){
-     int itemSpace = getNumberSpace(currentItem, lastItem);
-     if (itemSpace > 3) {
-       result = result + 1;
-     } else {
+    } else if (currentItemType == 'int' && lastItemType == 'int') {
+      int itemSpace = getNumberSpace(currentItem, lastItem);
+      if (itemSpace > 3) {
+        result = result + 1;
+      } else {
         // Do nothing.
+      }
     }
   }
   return result;
 }
 
-
 /// This method returns a boolean
 /// value (either [true] or [fasle])
 /// that sums up whether a password
 /// is secure or not.
-bool isSecure(String password){
+bool isSecure(String password) {
   bool result = false;
   int passwordRating = passwordStrength(password);
   if (passwordRating > 8) {
@@ -63,7 +53,7 @@ bool isSecure(String password){
   return result;
 }
 
-void testPwdMethods(){
+void testPwdMethods() {
   print(passwordStrength('adamsmith'));
   print(passwordStrength('numba61987@_'));
   print(isSecure('numba61987@_'));
