@@ -5,6 +5,20 @@ Licensed under the MIT license.
 
 import 'chars.dart';
 
+/// This variable is the security weight
+/// that the algorithm checks against.
+int securityWeight = 3;
+
+/// This variable is the increment weight
+/// that a special character warrants
+/// in a password.
+int specialCharacterWeight = 3;
+
+/// This variable is the increment weight
+/// that an "arabic" character (number or letter)
+///  warrants in a password.
+int arabicCharacterWeight = 2;
+
 /// This method returns the strength
 /// of a password on a scale from
 /// one to ten as an integer.
@@ -18,18 +32,18 @@ int passwordStrength(String password) {
     String lastItemType = charType(lastItem);
     if (currentItemType == 'normChar' && lastItemType == 'normChar') {
       int itemSpace = getCharSpace(currentItem, lastItem);
-      if (itemSpace > 3) {
-        result = result + 1;
+      if (itemSpace > securityWeight) {
+        result = result + arabicCharacterWeight;
       } else {
         // Do nothing.
       }
     } else if (currentItemType == 'specialChar' &&
         lastItemType == 'specialChar') {
-      result = result + 2;
+      result = result + specialCharacterWeight;
     } else if (currentItemType == 'int' && lastItemType == 'int') {
       int itemSpace = getNumberSpace(currentItem, lastItem);
-      if (itemSpace > 3) {
-        result = result + 1;
+      if (itemSpace > securityWeight) {
+        result = result + arabicCharacterWeight;
       } else {
         // Do nothing.
       }
@@ -54,8 +68,8 @@ bool isSecure(String password) {
 }
 
 void testPwdMethods() {
-  print(passwordStrength('adamsmith'));
-  print(passwordStrength('numba61987@_'));
-  print(isSecure('numba61987@_'));
-  print(isSecure('adamsmith'));
+  print('Password strength of "adamsmith": ${passwordStrength('adamsmith')}');
+  print('Password strength of "numba61987@_": ${passwordStrength('numba61987@_')}');
+  print('Security of "numba61987@_": ${isSecure('numba61987@_')}');
+  print('Security of "adamsmith": ${isSecure('adamsmith')}');
 }
