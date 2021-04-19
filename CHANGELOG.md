@@ -5,3 +5,4 @@
 - upload to GitHub
 - upload to Pub.dev
 - speed optimizations
+- changed security weights
