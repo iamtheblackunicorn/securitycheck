@@ -85,14 +85,14 @@ String charType(String character) {
 /// This method tests all of the
 /// above methods.
 void testCharMethods() {
-  print(getCharPositon('a'));
-  print(getCharSpace('a', 'd'));
-  print(getNumberSpace('1', '9'));
-  print(isInt('2'));
-  print(isInt('c'));
-  print(stringType('@'));
-  print(stringType('v'));
-  print(charType('3'));
-  print(charType('a'));
-  print(charType('-'));
+  print('Character position of the letter "a": ${getCharPositon('a')}');
+  print('Space between "a" and "d": ${getCharSpace('a', 'd')}');
+  print('Space between "1" and "9": ${getNumberSpace('1', '9')}');
+  print('Is "2" an integer: ${isInt('2')}');
+  print('Is "c" an integer: ${isInt('c')}');
+  print('String type of "@": ${stringType('@')}');
+  print('String type of "v": ${stringType('v')}');
+  print('Character type of "3": ${charType('3')}');
+  print('Character type of "a": ${charType('a')}');
+  print('Character type of "-": ${charType('-')}');
 }
