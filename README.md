@@ -1,6 +1,6 @@
 # SECURITY CHECK :key:
 
-[![Build Status](https://travis-ci.com/iamtheblackunicorn/securitycheck.svg?branch=main)](https://travis-ci.com/iamtheblackunicorn/securitycheck)
+![GitHub CI](https://github.com/iamtheblackunicorn/securitycheck/actions/workflows/dart.yml/badge.svg)
 
 *A library to check whether your passwords are secure and strong.* :key:
 
