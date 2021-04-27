@@ -22,4 +22,5 @@ String generatePassword(int length){
 
 void testGenerator(){
   print(generatePassword(8));
+  print(generatePassword(256));
 }
