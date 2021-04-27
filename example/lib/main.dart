@@ -2,6 +2,8 @@
 // Security Check by Alexander Abraham, The Black Unicorn.
 // Licensed under the MIT license.
 
+import 'package:securitycheck/securitycheck.dart';
+
 void main(){
 
   // Your password as a string.
@@ -19,6 +21,9 @@ void main(){
   //Prints either true or false.
   print(myPasswordIsStrong);
 
+  // Generate a password of length 8.
+  generatePassword(8);
+
 }
 */
 
@@ -33,6 +38,10 @@ void main() {
   print('\n');
   print('Testing character methods:');
   testCharMethods();
+  print('\n');
+  print('\n');
+  print('Testing generator methods:');
+  testGenerator();
   print('\n');
   print('\n');
 }

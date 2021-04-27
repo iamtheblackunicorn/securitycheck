@@ -30,7 +30,7 @@ dependencies:
 ```YAML
 dependencies:
   ...
-  securitycheck: ^1.0.0
+  securitycheck: ^1.1.0
 ```
 
 The three dots represent anything else that you might have in the `dependencies` section.

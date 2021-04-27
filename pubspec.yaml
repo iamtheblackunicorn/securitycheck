@@ -1,6 +1,6 @@
 name: securitycheck
 description: A library to check whether your passwords are secure and strong.
-version: 1.0.0
+version: 1.1.0
 homepage: https://github.com/iamtheblackunicorn/securitycheck
 environment:
   sdk: '>=2.12.0 <3.0.0'
