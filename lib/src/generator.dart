@@ -10,11 +10,11 @@ import "dart:math";
 String generatePassword(int length){
   Random randomInstance = Random();
   String alphabetString = 'abcdefghijklmnopqrstuvwxyz1234567890@_;.:';
-  List<String> alphabetString.split('');
+  List<String> alphabet = alphabetString.split('');
   List<String> result = [];
   for (int i = 0; i < length; i++){
-    int randIndex = randomInstance.nextInt(alphabetList.length);
-    String randomChar = alphabetList[randIndex];
+    int randIndex = randomInstance.nextInt(alphabet.length);
+    String randomChar = alphabet[randIndex];
     result.add(randomChar);
   }
   return result.join('');
